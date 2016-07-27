@@ -24,8 +24,5 @@ def init():
         curses.echo()
         curses.endwin()
         sys.exit()
-   userSays = stdscr.getKey()
-   if userSays == KEY_UP:
-       print "Yay."
        
 init()
