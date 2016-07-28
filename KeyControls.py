@@ -15,9 +15,11 @@ from Adafruit_PWM_Servo_Driver import PWM
 from curses import wrapper
 
 stdscr = curses.initscr()
+pwm.setPWMFreq(60)
+pwm = PWM(0x40)         # Initialise the PWM device using the default address
 
 def drive(leftSpd, rightSpd):
-    pwm = PWM(0x40)         # Initialise the PWM device using the default address
+    global pwm
     pwm.setPWM(0, 0, leftSpd)
     pwm.setPWM(1, 0, rightSpd)
     time.sleep(0.05)
