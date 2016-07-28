@@ -44,10 +44,8 @@ def init():
     global controller
     w = Label(controller, text="Use arrow keys to control the robot.")
     w.pack()
-    self.quitButton = Button(
-            frame, text="QUIT", fg="red", command=frame.quit
-            )
-        self.quitButton.pack(side=LEFT
+    self.quitButton = Button(frame, text="QUIT", fg="red", command=frame.quit)
+    self.quitButton.pack(side=LEFT)
 
 controller.bind_all('', key_input)
 controller.mainloop()
