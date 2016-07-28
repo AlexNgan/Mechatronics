@@ -15,7 +15,7 @@ def killSwitch():
     stdscr.keypad(False)
     curses.echo()
     curses.endwin()
-    sys.exit()
+    sys.exit()                           #Exits program.
 
 #Configures console to work with arrow keys.
 def init():
@@ -40,7 +40,7 @@ def init():
             #     drive()
             # else:
             #     drive()
-    except KeyboardInterrupt:  #Returns console to standard state.
+    except:  #Returns console to standard state.
         killSwitch()
 
 init()
