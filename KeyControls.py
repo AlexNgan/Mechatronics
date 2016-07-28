@@ -23,3 +23,6 @@ def config():
         curses.echo()
         curses.endwin()
         sys.exit()
+
+config()
+
