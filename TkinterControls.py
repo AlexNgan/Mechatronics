@@ -42,7 +42,7 @@ def key_input(event):
 
 def init():
     global controller
-    w = Label(controller, text="Use arrow keys to control the robot."")
+    w = Label(controller, text="Use arrow keys to control the robot.")
     w.pack()
     self.quitButton = Button(
             frame, text="QUIT", fg="red", command=frame.quit
