@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------------------------------#
 #Author: Gloria
 #This program allows a robot to be controlled with arrow keys
-#through the Linux terminal.
+#through the Linux terminal. Utilizes Python's curse library.
 #   Reference:
 #   Min pulse length out of 4096 is 150
 #   Max pulse length out of 4096 is 600.
