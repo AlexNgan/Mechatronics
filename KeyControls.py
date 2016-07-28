@@ -21,6 +21,9 @@ def drive(leftSpd, rightSpd):
     pwm.setPWM(0, 0, leftSpd)
     pwm.setPWM(1, 0, rightSpd)
     time.sleep(1)
+    pwm.setPWM(0, 0, 402)
+    pwm.setPWM(1, 0, 400)
+    time.sleep(1)
 
 #Returns console to standard state.
 def killSwitch():
