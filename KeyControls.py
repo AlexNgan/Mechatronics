@@ -20,10 +20,10 @@ def drive(leftSpd, rightSpd):
     pwm = PWM(0x40)         # Initialise the PWM device using the default address
     pwm.setPWM(0, 0, leftSpd)
     pwm.setPWM(1, 0, rightSpd)
-    time.sleep(1)
+    time.sleep(0.05)
     pwm.setPWM(0, 0, 402)
     pwm.setPWM(1, 0, 400)
-    time.sleep(1)
+    time.sleep(0.05)
 
 #Returns console to standard state.
 def killSwitch():
@@ -44,13 +44,13 @@ def init():
         stdscr.keypad(True)      #Enables keypad input.
         while True:
             userSays = stdscr.getch()
-            if userSays == "^C":         #Should handle KeyboardInterrupt.
+            if ord(userSays == "^C"):         #Should handle KeyboardInterrupt.
                 killSwitch()
                 break
             elif userSays == curses.KEY_UP:            #Forward.
-                drive(600, 150)
-            elif userSays == curses.KEY_DOWN:    #Backwards.
                 drive(150, 600)
+            elif userSays == curses.KEY_DOWN:    #Backwards.
+                drive(600, 150)
             elif userSays == curses.KEY_LEFT:         #Left.
                 drive(150, 150)
             elif userSays == curses.KEY_RIGHT:      #Right.
