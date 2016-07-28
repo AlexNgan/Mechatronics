@@ -3,19 +3,23 @@
 
 import sys
 import curses
+from curses import wrapper
 
 #Configures console to work with arrow keys.
 def config():
-    stdscr = curses.initscr()
-    stdscr.clear()                #Clears screen.
-    curses.noecho()
-    curses.cbreak()             #Negates usual buffer mode.
-    stdscr.keypad(True)       #Enables keypad input.
+    try:        #Configures console to work with arrow keys.
+        stdscr = curses.initscr()
+        stdscr.clear()                #Clears screen.
+        curses.noecho()
+        curses.cbreak()             #Negates usual buffer mode.
+        stdscr.keypad(True)       #Enables keypad input.
 
-#Returns console to standard state.
-def revert():
-    curses.nocbreak()
-    stdscr.keypad(False)
-    curses.echo()
-    curses.endwin()
-    sys.exit()
+        userSays = stdscr.getch()
+        if userSays = curses.KEY_UP:
+            print ("Yay.")
+    except KeyboardInterrupt:  #Returns console to standard state.
+        curses.nocbreak()
+        stdscr.keypad(False)
+        curses.echo()
+        curses.endwin()
+        sys.exit()
