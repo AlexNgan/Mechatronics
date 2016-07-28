@@ -6,11 +6,14 @@ from curses import wrapper
 #This program allows a robot to be controlled with arrow keys
 #through the Linux terminal.
 
-def drive(leftSpd, rightSpd):
+stdscr = curses.initscr()
+
+#def drive(leftSpd, rightSpd):
     #code here.
 
 #Returns console to standard state.
 def killSwitch():
+    global stdscr
     curses.nocbreak()
     stdscr.keypad(False)
     curses.echo()
@@ -19,15 +22,15 @@ def killSwitch():
 
 #Configures console to work with arrow keys.
 def init():
+    global stdscr
     try:        #Configures console to work with arrow keys.
-        stdscr = curses.initscr()
         stdscr.clear()                #Clears screen.
         curses.noecho()
         curses.cbreak()             #Negates usual buffer mode.
         stdscr.keypad(True)      #Enables keypad input.
         while True:
             userSays = stdscr.getch()
-            if userSays == 3:         #Should handle KeyboardInterrupt.
+            if userSays == "^C":         #Should handle KeyboardInterrupt.
                 killSwitch()
                 break
             elif userSays == curses.KEY_UP:
