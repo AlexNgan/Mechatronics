@@ -34,6 +34,7 @@ def killSwitch():
     stdscr.keypad(False)
     curses.echo()
     curses.endwin()
+    drive(402, 400)
     sys.exit()                           #Exits program.
 
 #Configures console to work with arrow keys.
