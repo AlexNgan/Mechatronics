@@ -15,7 +15,7 @@ def config():
         stdscr.keypad(True)       #Enables keypad input.
 
         userSays = stdscr.getch()
-        if userSays = curses.KEY_UP:
+        if userSays == curses.KEY_UP:
             print ("Yay.")
     except KeyboardInterrupt:  #Returns console to standard state.
         curses.nocbreak()
