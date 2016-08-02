@@ -8,8 +8,6 @@
 #	100 - Open claw fully (sleep 1).
 #	440 - Close all the way (sleep 1).
 #-----------------------------------------------------#
-
-import sys
 import time
 from Adafruit_PWM_Servo_Driver import PWM
 
