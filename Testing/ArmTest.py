@@ -1,9 +1,5 @@
 #-----------------------------------------------------#
 # Author: Gloria
-# This program allows a user to control the claw
-# of the robot using the A and D keys. Pressing S
-# stops the claw.
-#
 # Note that the claw has a mechanical stopper that 
 # restricts movement beyond a certain point. Motor
 # can still be damaged if it is kept running against
