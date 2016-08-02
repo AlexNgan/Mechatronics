@@ -49,3 +49,5 @@ def init():
                 moveClaw(6, 0, 0)
     except KeyboardInterrupt:
         moveClaw(6, 0, 0)
+
+init()
