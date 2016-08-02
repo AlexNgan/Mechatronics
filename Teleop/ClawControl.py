@@ -45,5 +45,7 @@ def init():
                 incrementClaw(-1)
             elif userSays == 100:           #Opens claw.
                 incrementClaw(1)
+            elif userSays == 115:           #Stops claw.
+                moveClaw(6, 0, 0)
     except KeyboardInterrupt:
         moveClaw(6, 0, 0)
