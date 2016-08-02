@@ -8,6 +8,9 @@
 # restricts movement beyond a certain point. Motor
 # can still be damaged if it is kept running against
 # stopper.
+# Reference:
+#	100 - Open claw fully (sleep 1).
+#	440 - Close all the way (sleep 1).
 #-----------------------------------------------------#
 
 import sys
@@ -23,7 +26,7 @@ def moveClaw(speed, sleepTime):
 
 #Need following to ensure motor stops.
 def stopClaw():
-	pwm.setPWM(6, 0, 400)
+	pwm.setPWM(6, 0, 0)
 	time.sleep(1)
 
 moveClaw(110, 1)
