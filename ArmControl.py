@@ -17,8 +17,10 @@ from Adafruit_PWM_Servo_Driver import PWM
 pwm = PWM(0x40)
 pwm.setPWMFreq(60)
 
-def moveClaw(speed, time):
+def moveClaw(speed, sleepTime):
 	pwm.setPWM(6, 0, speed)
-	time.sleep(time)
+	time.sleep(sleepTime)
+	pwm.setPWM(6, 0, 400)
+	time.sleep(1)
 
 moveClaw(100, 1)
