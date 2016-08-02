@@ -5,8 +5,8 @@
 #   Reference:
 #   Min pulse length out of 4096 is 150
 #   Max pulse length out of 4096 is 600.
-#   Stop value for servo in channel 1(left) )is 402.
-#   Stop value for servo in channel 0 (right) is 400.
+#   Stop value for servo in channel 4(left) )is 402.
+#   Stop value for servo in channel 5 (right) is 400.
 #-------------------------------------------------------------------------------------------------------#
 import sys
 import curses
@@ -19,8 +19,8 @@ pwm = PWM(0x40)
 pwm.setPWMFreq(60)
 
 def drive(leftSpd, rightSpd):         # Initialise the PWM device using the default address
-    pwm.setPWM(0, 0, leftSpd)
-    pwm.setPWM(1, 0, rightSpd)
+    pwm.setPWM(4, 0, leftSpd)
+    pwm.setPWM(5, 0, rightSpd)
 
 #Returns console to standard state.
 def killSwitch():
