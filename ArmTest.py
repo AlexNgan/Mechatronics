@@ -20,7 +20,11 @@ pwm.setPWMFreq(60)
 def moveClaw(speed, sleepTime):
 	pwm.setPWM(6, 0, speed)
 	time.sleep(sleepTime)
+
+#Need following to ensure motor stops.
+def stopClaw():
 	pwm.setPWM(6, 0, 400)
 	time.sleep(1)
 
-moveClaw(100, 1)
+moveClaw(110, 1)
+stopClaw()
