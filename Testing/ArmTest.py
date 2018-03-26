@@ -1,5 +1,5 @@
 #-----------------------------------------------------#
-# Author: Gloria
+# Author: Mortyyy
 # Note that the claw has a mechanical stopper that 
 # restricts movement beyond a certain point. Motor
 # can still be damaged if it is kept running against
