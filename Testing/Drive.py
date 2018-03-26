@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------------------------------#
-#Author: Gloria
+#Author: Mortyyy
 #This program allows a robot to be controlled with arrow keys
 #through the Linux terminal. Utilizes Python's curse library.
 #   Reference:
