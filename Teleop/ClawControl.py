@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------------------------------#
-#Author: Gloria
+#Author: Mortyyy
 #This program allows the claw to be controlled with the A and D  keys
 #through the Linux terminal.
 #   Reference:
